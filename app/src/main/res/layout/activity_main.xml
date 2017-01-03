@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_topbar"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/ly_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/text_yellow">
+
+        <TextView
+            android:id="@+id/txt_topbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="图书交换平台"
+            android:textColor="@color/text_topbar"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/text_topbar" />
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/text_topbar"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_book"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_book"
+            android:text="@string/book" />
+
+        <RadioButton
+            android:id="@+id/rb_chat"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_chat"
+            android:text="@string/chat" />
+
+        <RadioButton
+            android:id="@+id/rb_mine"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_mine"
+            android:text="@string/mine" />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_above="@id/rg_tab_bar"
+        android:background="@color/text_topbar" />
+
+    <FrameLayout
+        android:id="@+id/ly_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/div_tab_bar"
+        android:layout_below="@id/ly_top_bar"></FrameLayout>
+
+</RelativeLayout>
